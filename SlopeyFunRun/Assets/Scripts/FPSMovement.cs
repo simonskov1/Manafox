@@ -40,7 +40,7 @@ public class FPSMovement : MonoBehaviour
     {
         if (!isFrozen)
         {
-            movement.Walk(inputController.MovementV3, inputController.Sprinting);
+            movement.Move(inputController.MovementV3);
         }
     }
 
