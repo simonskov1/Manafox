@@ -32,7 +32,7 @@ public class InputController : MonoBehaviour
 
     Vector3 GetMovement()
     {
-        return new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+        return new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0).normalized;
     }
 
 
