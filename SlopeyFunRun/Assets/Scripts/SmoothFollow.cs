@@ -21,7 +21,7 @@ public class SmoothFollow : MonoBehaviour
     float currentHeight;
     Quaternion currentRotation;
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (target)
         {
