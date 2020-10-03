@@ -309,42 +309,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
-<<<<<<< HEAD
-=======
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &528427163
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 528427164}
-  - component: {fileID: 528427167}
-  - component: {fileID: 528427166}
-  m_Layer: 0
-  m_Name: Skin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &528427164
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528427163}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5300007, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5989789447856044263}
-  m_Father: {fileID: 1294110379}
-  m_RootOrder: 1
->>>>>>> parent of 2251611... PreSammensætning
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &607043718
 GameObject:
@@ -998,15 +962,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457436847}
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_LocalRotation: {x: 0.52921206, y: 0.5788994, z: 0.40604872, w: 0.46897185}
   m_LocalPosition: {x: -32.144, y: 1.3800309, z: 12.037153}
   m_LocalScale: {x: 0.1, y: 0.099999994, z: 0.099999994}
-=======
-  m_LocalRotation: {x: 0.08254283, y: 0.70227253, z: -0.08254282, w: 0.70227253}
-  m_LocalPosition: {x: -194.84, y: 28.949999, z: -0.58514535}
-  m_LocalScale: {x: 1, y: 1, z: 1}
->>>>>>> parent of 2251611... PreSammensætning
 =======
   m_LocalRotation: {x: 0.08254283, y: 0.70227253, z: -0.08254282, w: 0.70227253}
   m_LocalPosition: {x: -194.84, y: 28.949999, z: -0.58514535}
@@ -1521,13 +1479,8 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3909943572042480608}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_GameObject: {fileID: 0}
   m_Enabled: 0
-=======
-  m_GameObject: {fileID: 1840589090}
-  m_Enabled: 1
->>>>>>> parent of 2251611... PreSammensætning
 =======
   m_GameObject: {fileID: 1840589090}
   m_Enabled: 1
@@ -1537,28 +1490,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1 &1983781061
 GameObject:
   m_ObjectHideFlags: 3
 =======
-=======
->>>>>>> parent of 2251611... PreSammensætning
   BodyAxis: {fileID: 1294110379}
   forceAmount: 3
 --- !u!1 &2100956802
 GameObject:
   m_ObjectHideFlags: 0
-<<<<<<< HEAD
->>>>>>> parent of 2251611... PreSammensætning
-=======
 >>>>>>> parent of 2251611... PreSammensætning
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
 <<<<<<< HEAD
   - component: {fileID: 1983781062}
   - component: {fileID: 1983781064}
@@ -1570,17 +1516,11 @@ GameObject:
   m_Layer: 0
   m_Name: Player_ballMovement
 >>>>>>> parent of 2251611... PreSammensætning
-=======
-  - component: {fileID: 2100956803}
-  m_Layer: 0
-  m_Name: Player_ballMovement
->>>>>>> parent of 2251611... PreSammensætning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!4 &1983781062
 Transform:
@@ -1621,8 +1561,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 =======
-=======
->>>>>>> parent of 2251611... PreSammensætning
 --- !u!4 &2100956803
 Transform:
   m_ObjectHideFlags: 0
