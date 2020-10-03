@@ -11,6 +11,8 @@ public class AlignRotationToTerrainNormal : MonoBehaviour
     Rigidbody rb;
     private bool isGrounded;
     public float lerpTime = 1;
+    private bool isFirstGrounded = true;
+    public GameObject initialCamera;
 
     private void Awake()
     {
@@ -19,7 +21,17 @@ public class AlignRotationToTerrainNormal : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!isGrounded)
+        if(isGrounded && isFirstGrounded)
+        {
+            initialCamera.SetActive(false);
+            isFirstGrounded = false;
+        }
+
+        if (!isGrounded && rb.velocity == Vector3.zero)
+        {
+            rb.velocity = skinToAlign.forward;
+        }
+        else if(!isGrounded)
         {
             Vector3 limitedVelocityVector = new Vector3(rb.velocity.normalized.x, Mathf.Clamp(rb.velocity.normalized.y, -0.30f, 1f), rb.velocity.normalized.z);
             Vector3 lerpedupwardsVector = new Vector3(Mathf.Lerp(skinToAlign.up.x, Vector3.up.x, lerpTime), Mathf.Lerp(skinToAlign.up.y, Vector3.up.y, lerpTime), Mathf.Lerp(skinToAlign.up.z, Vector3.up.z, lerpTime));
