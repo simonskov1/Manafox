@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 0b8b3c4b5968ac24492006b4f3bcf404
+guid: 994e2511ba7c95843ada871f10049639
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slope_guy
+    second: {fileID: 2100000, guid: 04af952078aeef348a3a597399b653e4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
