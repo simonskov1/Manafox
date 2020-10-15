@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: 6fa69148657d5a9449da4c309dc19025
+guid: 994e2511ba7c95843ada871f10049639
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -4430795357424791540
+    second: Slope_guy|Action
   externalObjects: {}
   materials:
     materialImportMode: 1

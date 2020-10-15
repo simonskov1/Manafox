@@ -1,8 +1,20 @@
 fileFormatVersion: 2
-guid: 6fa69148657d5a9449da4c309dc19025
+guid: f985b11d52b489048a461620469b2f82
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -4430795357424791540
+    second: Slope_guy|Action
+  - first:
+      74: 412302121750888369
+    second: Slope_guy|board_midair
+  - first:
+      74: 8958457157728608409
+    second: Slope_guy|board_turn_right
+  - first:
+      74: 6600531012313716524
+    second: Slope_guy|turn_left_board
   externalObjects: {}
   materials:
     materialImportMode: 1
