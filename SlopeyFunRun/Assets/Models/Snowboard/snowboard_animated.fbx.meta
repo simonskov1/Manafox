@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4c5efba6a3e59c54f927c3fae92b7e1b
+guid: 52bfcb87825890943946842d721ade4b
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
@@ -7,14 +7,17 @@ ModelImporter:
       74: -8281878398921072898
     second: snowboard|Action
   - first:
+      74: 3355069879107637740
+    second: snowboard|Board_idle
+  - first:
       74: -3616955460326379582
     second: snowboard|board_midair
   - first:
-      74: 4261771751296436288
-    second: snowboard|board_turn_right
+      74: -3507095646970784653
+    second: snowboard|Board_turn_left
   - first:
-      74: 4987900370079227694
-    second: snowboard|turn_left_board
+      74: -8652607437766021113
+    second: snowboard|Board_turn_right
   externalObjects: {}
   materials:
     materialImportMode: 1
