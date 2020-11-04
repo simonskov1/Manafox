@@ -28,6 +28,6 @@ public class Restart : MonoBehaviour
 
     private void Reset()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        SceneManager.LoadScene("Mads_Test", LoadSceneMode.Single);
     }
 }

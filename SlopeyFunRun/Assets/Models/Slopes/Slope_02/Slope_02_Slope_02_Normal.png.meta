@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: fbb03334f4df0024c8db880072f217df
+=======
+guid: 9fc81ca2c0275694b9dd891dbe3e74b6
+>>>>>>> Mads
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
