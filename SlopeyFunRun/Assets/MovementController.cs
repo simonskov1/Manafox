@@ -8,6 +8,10 @@ public class MovementController : MonoBehaviour
     Rigidbody rb;
     public float forceAmount = 1;
 
+    [SerializeField]
+    private Animator animator;
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -15,11 +19,20 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
+        animator.SetBool("isTurningLeft", false);
+        animator.SetBool("isTurningRight", false);
+
         Vector3 direction = new Vector3(BodyAxis.right.x, 0, BodyAxis.right.z);
 
         if(Input.GetKey(KeyCode.A))
+        {
             rb.AddForce(-direction * forceAmount, ForceMode.Acceleration);
+            animator.SetBool("isTurningLeft", true);
+        }
         if (Input.GetKey(KeyCode.D))
+        {
             rb.AddForce(direction * forceAmount, ForceMode.Acceleration);
+            animator.SetBool("isTurningRight", true);
+        }
     }
 }
