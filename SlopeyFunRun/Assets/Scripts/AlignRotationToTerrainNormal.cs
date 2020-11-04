@@ -14,9 +14,17 @@ public class AlignRotationToTerrainNormal : MonoBehaviour
     private bool isFirstGrounded = true;
     public GameObject initialCamera;
 
+    [SerializeField]
+    Animator animator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     private void FixedUpdate()
