@@ -59,7 +59,7 @@ public class HighscoreSystem : MonoBehaviour
 
         if (string.IsNullOrEmpty(www.error))
         {
-            Debug.Log("Upload was succesfull");
+            Debug.Log("Download was succesfull");
             FormatHighscores(www.text);
             highscoreDisplay.OnHighscoresDownloaded(highscoreList);
         }

@@ -16,13 +16,13 @@ public class Controller : MonoBehaviour
     Vector3 localVel;
     float curDir = 0f;
     Vector3 curNormal = Vector3.up;
-    float distGround, distGroundL, distGroundR;
+    float distGround, distGroundL, distGroundR, distGroundD, distGroundU;
     float boardDeltaY;
 
     Rigidbody rg;
     public ParticleSystem ps;
     ParticleSystem.EmissionModule pe;
-    public Transform R, L;
+    public Transform R, L, D, U;
     public Trail prefabTrail;
     public float trailWidth = 0.3f;
 
@@ -59,6 +59,19 @@ public class Controller : MonoBehaviour
                 posGround.y = hit.point.y;
             distGroundR = hit.distance;
         }
+        if (Physics.Raycast(D.position, -curNormal, out hit))
+        {
+            posGround = hit.point;
+            distGroundD = hit.distance;
+            normalGround = hit.normal;
+        }
+        if (Physics.Raycast(U.position, -curNormal, out hit))
+        {
+            posGround = hit.point;
+            distGroundU = hit.distance;
+            normalGround = hit.normal;
+        }
+
         distGround = (distGroundL + distGroundR) / 2f;
         SnowTrail();
         SnowParticle();
@@ -74,7 +87,7 @@ public class Controller : MonoBehaviour
 
     void SnowTrail()
     {
-        if (distGround < 0.2f)
+        if (distGround < 0.2f || distGroundD < 0.2f || distGroundU < 0.2f )
         {
             _boardNoise.volume = magnitude / 50f;
             lastTrailId = trail.AddSkidMark(posGround, normalGround, trailWidth, lastTrailId);
@@ -117,15 +130,19 @@ public class Controller : MonoBehaviour
         pitch = 0.8f + magnitude / 40f;
         _windNoise.pitch = pitch;
 
-        rg.angularVelocity = Vector3.zero;
-        if (distGround > 0.2f) 
+
+
+        if (distGround > 0.2f && distGroundD > 0.2f && distGroundU > 0.2f) 
         {
-            //Air 
+            rg.angularVelocity = Vector3.zero;
+            //in the air
         }
         else
         {
             //On the ground/snow
             rg.velocity = transform.TransformDirection(localVel);
         }
+
+
     }
 }
