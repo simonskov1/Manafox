@@ -33,6 +33,11 @@ public class TileSpawner : MonoBehaviour
         GameObject tile = Instantiate(MapTile, new Vector3(0, -120, 500) * tileCount, Quaternion.identity);
         tileCount++;
         currentTiles.Add(tile);
+
+            List<int> liste = new List<int>();
+            liste.Add(1);
+            Queue<int> kø = new Queue<int>();
+            kø.Enqueue(liste[0]);
         }
     }
 }
