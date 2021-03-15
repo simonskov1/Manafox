@@ -18,7 +18,7 @@ public class DisplayHighscores : MonoBehaviour
 
         highscoreSystem = GetComponent<HighscoreSystem>();
 
-        StartCoroutine(RefreshHighscores());
+        //StartCoroutine(RefreshHighscores());
     }
 
     public void OnHighscoresDownloaded(Highscore[] highscoreList)

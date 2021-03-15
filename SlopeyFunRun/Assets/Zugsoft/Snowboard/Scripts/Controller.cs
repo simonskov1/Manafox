@@ -9,7 +9,7 @@ public class Controller : MonoBehaviour
 {
     
     float tilt;
-    public AudioSource _boardNoise, _windNoise;
+    public AudioSource _boardNoise, _windNoise, _landingNoise, _jumpingNoise;
 
     public float turnStrength = .1f;
 
@@ -29,6 +29,12 @@ public class Controller : MonoBehaviour
 
     int lastTrailId = -1;
     Trail trail;
+
+    //controls how often movement is done through fixedUpdate
+    float interval = 0.02f;
+    float nextTime = 0;
+
+
     private void Start()
     {
         pe = ps.emission;
@@ -109,41 +115,70 @@ public class Controller : MonoBehaviour
     RaycastHit hit;
     float magnitude;
     Vector3 ang;
+    bool _isGrounded = true;
+    public bool IsGrounded {
+        get { return _isGrounded; }
+        set 
+        {
+            _isGrounded = value;
+            if (value == true)
+            {
+                _landingNoise.Play();
+            }
+            else
+                _jumpingNoise.Play();
+        } 
+    }
+
     void FixedUpdate()
     {
-        boardDeltaY = 0;
-        boardDeltaY += (float)(tilt * (1 + velocity.magnitude / 30f));
-        ang = transform.eulerAngles;
-        ang.y += boardDeltaY;
-        transform.eulerAngles = ang;
-        velocity = rg.velocity;
-        localVel = transform.InverseTransformDirection(velocity);
-        localVel.x -= localVel.x * turnStrength;
-
-        //Simulate friction by increasing the drag depending of the speed
-        magnitude = velocity.magnitude;
-        if (magnitude < 3)
-            rg.drag = 0;
-        else
-            rg.drag = magnitude / 1600f;
-
-        _windNoise.volume = 0.2f + magnitude / 40f;
-        pitch = 0.8f + magnitude / 40f;
-        _windNoise.pitch = pitch;
+        
 
 
+            if (Time.fixedTime >= nextTime)
+            {
 
-        if (distGround > 0.2f && distGroundD > 0.2f && distGroundU > 0.2f) 
-        {
-            rg.angularVelocity = Vector3.zero;
-            //in the air
-        }
-        else
-        {
-            //On the ground/snow
-            rg.velocity = transform.TransformDirection(localVel);
-        }
+                //do something here every interval seconds
+                boardDeltaY = 0;
+                boardDeltaY += (float)(tilt * (1 + velocity.magnitude / 30f));
+                ang = transform.eulerAngles;
+                ang.y += boardDeltaY;
+                transform.eulerAngles = ang;
+                velocity = rg.velocity;
+                localVel = transform.InverseTransformDirection(velocity);
+                localVel.x -= localVel.x * turnStrength;
 
+                //Simulate friction by increasing the drag depending of the speed
+                magnitude = velocity.magnitude;
+                if (magnitude < 3)
+                    rg.drag = 0;
+                else
+                    rg.drag = magnitude / 1600f;
+
+                _windNoise.volume = 0.2f + magnitude / 40f;
+                pitch = 0.8f + magnitude / 40f;
+                _windNoise.pitch = pitch;
+
+
+
+                if (distGround > 0.2f && distGroundD > 0.2f && distGroundU > 0.2f)
+                {
+                if (IsGrounded)
+                    IsGrounded = false;
+                rg.angularVelocity = Vector3.zero;
+                    //in the air
+                }
+                else
+                {
+                if (!IsGrounded)
+                    IsGrounded = true;
+                    //On the ground/snow
+                    rg.velocity = transform.TransformDirection(localVel);
+                }
+
+                nextTime = Time.fixedTime + interval;
+
+            }
 
     }
 }
