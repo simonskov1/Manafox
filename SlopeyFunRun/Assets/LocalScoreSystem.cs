@@ -38,7 +38,7 @@ public class LocalScoreSystem : MonoBehaviour
     {
         if(!hasBeenUploaded)
         {
-            if (!string.IsNullOrEmpty(nameTextForUpload.text))
+            if (!string.IsNullOrWhiteSpace(nameTextForUpload.text))
                 HighscoreSystem.AddNewHighscore(nameTextForUpload.text, score);
             else
                 HighscoreSystem.AddNewHighscore("unknown", score);

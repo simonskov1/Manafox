@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     float cooldown;
     // Start is called before the first frame update
+
+    
     void Start()
     {
         
@@ -29,7 +31,12 @@ public class GameManager : MonoBehaviour
             PauseGame();
             highscoreMenu.SetActive(true);
         }
-            
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Time.timeScale = 0.05f;
+        }
+
 
         if (Input.GetKeyDown(KeyCode.U))
             ResumeGame();
@@ -44,18 +51,22 @@ public class GameManager : MonoBehaviour
 
     void PauseGame()
     {
-        AudioListener.pause = true;
         Time.timeScale = 0;
+        AudioSource[] PlayerSounds = FindObjectOfType<Controller>().GetComponents<AudioSource>();
+        foreach (AudioSource sound in PlayerSounds)
+        {
+            sound.Stop();
+        }
     }
 
     public void ResumeGame()
     {
-        AudioListener.pause = false;
         Time.timeScale = 1;
     }
 
     public void Restart()
     {
+        ResumeGame();
         SceneManager.LoadScene("Mads_Test", LoadSceneMode.Single);
     }
 }
