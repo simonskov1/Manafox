@@ -191,6 +191,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4144815873697056615, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: b8baa2443e532eb499e74204d3c44854, type: 2}
+    - target: {fileID: 4144815874140284403, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144815874140284406, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4144815874164249061, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
       propertyPath: m_Name
       value: GameStuff
@@ -239,21 +251,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4144815874682111187, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
+      propertyPath: MapTile
+      value: 
+      objectReference: {fileID: 7826316853208489826, guid: c0e16cad8efea5d44849b9ba492077a1, type: 3}
     - target: {fileID: 8926915855877533851, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015896628
+      value: -0.000000015896616
       objectReference: {fileID: 0}
     - target: {fileID: 8926915855877533851, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000065845973
+      value: 0.0000000065845933
       objectReference: {fileID: 0}
     - target: {fileID: 8926915856235117772, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015896628
+      value: -0.000000015896616
       objectReference: {fileID: 0}
     - target: {fileID: 8926915856235117772, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000065845973
+      value: 0.0000000065845933
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b9421e1d66ddb94c8958b702c2625bb, type: 3}
