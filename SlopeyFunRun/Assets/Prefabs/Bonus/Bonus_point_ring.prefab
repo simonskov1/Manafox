@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1221120627326900376}
   - component: {fileID: 2836582945152030525}
   - component: {fileID: 52185437751944183}
-  - component: {fileID: 7897164633281319388}
   - component: {fileID: 5625990393258338438}
+  - component: {fileID: 546331444435859238}
   m_Layer: 0
   m_Name: Bonus_point_ring
   m_TagString: Untagged
@@ -83,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7897164633281319388
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997797308477506082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8803937527578110353, guid: 4cfb9d4f2e424764eb4ec514794c1fdf, type: 3}
 --- !u!114 &5625990393258338438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,3 +95,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa5efc3df2db61458c144c9ca9d22ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rewardParticle: {fileID: 7159834180016641880, guid: f1ebb2568123e514c969ee2cc5489d65, type: 3}
+  pointsForCollision: 5
+--- !u!135 &546331444435859238
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997797308477506082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.92
+  m_Center: {x: 0, y: 0, z: 0}
