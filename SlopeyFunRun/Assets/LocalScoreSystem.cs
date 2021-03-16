@@ -10,11 +10,20 @@ public class LocalScoreSystem : MonoBehaviour
     private int score = 0;
     [SerializeField]
     private TextMeshProUGUI nameTextForUpload;
+    [SerializeField]
+    private TextMeshProUGUI scoreIngameUI;
+
+
+
 
     public int Score
     {
         get { return score; }
-        private set { score = value; }
+        private set 
+        { 
+            score = value;
+            scoreIngameUI.text = score.ToString();
+        }
     }
 
     // Start is called before the first frame update

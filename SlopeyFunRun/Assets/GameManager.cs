@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject highscoreMenu;
 
+    [SerializeField]
+    private GameObject scoreUI;
+
     float cooldown;
     // Start is called before the first frame update
 
@@ -29,6 +32,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             PauseGame();
+            scoreUI.SetActive(false);
             highscoreMenu.SetActive(true);
         }
 
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour
     public void DoGameOver()
     {
         PauseGame();
+        scoreUI.SetActive(false);
         highscoreMenu.SetActive(true);
     }
 
