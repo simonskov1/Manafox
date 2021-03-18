@@ -20,7 +20,7 @@ public class AnimatePlayer : MonoBehaviour
     void Update()
     {
         float tilt = Input.GetAxis("Horizontal");
-        characterAnimator.SetFloat("Tilt", tilt);
-        boardAnimator.SetFloat("Tilt", tilt);
+        characterAnimator.SetFloat("Tilt", tilt, 0.075f, Time.deltaTime);
+        characterAnimator.SetFloat("Tilt", tilt, 0.075f, Time.deltaTime);
     }
 }
