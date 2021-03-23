@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa5efc3df2db61458c144c9ca9d22ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardParticle: {fileID: 7159834180016641880, guid: f1ebb2568123e514c969ee2cc5489d65, type: 3}
+  rewardParticle: {fileID: 5041270514999000220, guid: 7ec24567ef5e75847852992c28ba97d4, type: 3}
   pointsForCollision: 5
 --- !u!135 &546331444435859238
 SphereCollider:
