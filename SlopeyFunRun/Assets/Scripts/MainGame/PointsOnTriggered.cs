@@ -12,7 +12,7 @@ public class PointsOnTriggered : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         FindObjectOfType<LocalScoreSystem>().addPointsToScore(pointsForCollision);
-        var rewardObj = Instantiate(rewardParticle, transform.position, Quaternion.identity);
+        var rewardObj = Instantiate(rewardParticle, FindObjectOfType<Controller>().transform);
         Destroy(rewardObj, 3);
         Destroy(gameObject);
     }
